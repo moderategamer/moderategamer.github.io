@@ -1,4 +1,2 @@
-theme: jekyll-theme-slate
-
 include:
   - assets/css/dark.css
