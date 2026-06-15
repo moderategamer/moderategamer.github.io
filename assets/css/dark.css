@@ -1,66 +1,63 @@
 /* GLOBAL BACKGROUND + TEXT */
-body {
-  background-color: #0d1117 !important;
-  color: #c9d1d9 !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+html, body {
+  background-color: #1e1e1e !important; /* VS dark */
+  color: #d4d4d4 !important;
+  margin: 0;
+  padding: 0;
+  font-family: Consolas, "Courier New", monospace;
 }
 
-/* PAGE HEADER */
-.page-header {
-  background-color: #161b22 !important;
-  border-bottom: 1px solid #30363d !important;
-  padding: 2rem 0 !important;
+/* FORCE ALL CONTAINERS DARK */
+* {
+  background-color: transparent;
+  color: inherit;
 }
 
-.page-header h1,
-.page-header h2 {
-  color: #e6edf3 !important;
-}
-
-/* CONTENT AREA */
-.main-content {
-  background-color: #0d1117 !important;
-  padding: 2rem !important;
-  border-radius: 6px;
-  border: 1px solid #30363d !important;
+/* MAIN CONTENT WRAPPER (GitHub Pages / Jekyll common classes) */
+.wrapper,
+.main-content,
+.page,
+.page-header,
+.site-footer {
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+  border-color: #3c3c3c !important;
 }
 
 /* LINKS */
 a {
-  color: #58a6ff !important;
+  color: #569cd6 !important; /* VS blue */
+  text-decoration: none;
 }
 
 a:hover {
-  color: #1f6feb !important;
+  color: #9cdcfe !important; /* lighter blue */
 }
 
 /* HEADINGS */
-h1, h2, h3, h4 {
-  color: #e6edf3 !important;
-  border-color: #30363d !important;
+h1, h2, h3, h4, h5 {
+  color: #dcdcdc !important;
 }
 
 /* CODE BLOCKS */
 pre, code {
-  background-color: #161b22 !important;
-  color: #c9d1d9 !important;
-  border-radius: 6px !important;
-  border: 1px solid #30363d !important;
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+  border: 1px solid #3c3c3c !important;
+  border-radius: 4px;
+}
+
+/* INLINE CODE */
+code {
+  padding: 0 2px;
 }
 
 /* TABLES */
-table {
-  border-color: #30363d !important;
+table, th, td {
+  border-color: #3c3c3c !important;
 }
 
-th, td {
-  border-color: #30363d !important;
-}
-
-/* FOOTER */
-.site-footer {
-  background-color: #0d1117 !important;
-  color: #8b949e !important;
-  border-top: 1px solid #30363d !important;
-  padding: 2rem 0 !important;
+/* REMOVE WHITE PANELS */
+section, article, div {
+  background-color: transparent !important;
 }
