@@ -2,5 +2,6 @@
 
 Posts about Entity Framework Core.
 
-## Posts
-(coming soon)
+# EF Core Posts
+
+- [Test Post](test-post.md)
