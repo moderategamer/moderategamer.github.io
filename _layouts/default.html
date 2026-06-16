@@ -4,13 +4,22 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
 
-  <!-- Load your custom CSS -->
-  <link rel="stylesheet" href="/assets/css/dark.css">
+  <!-- Load your custom VS Dark+ theme -->
+  <link rel="stylesheet" href="/assets/css/vsdark.css">
 </head>
 
 <body>
-  <div class="wrapper">
+  <header class="site-header">
+    <h1><a href="/">Moderate</a></h1>
+    <h2>My learning blog</h2>
+  </header>
+
+  <main class="content-area">
     {{ content }}
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Published with GitHub Pages</p>
+  </footer>
 </body>
 </html>
