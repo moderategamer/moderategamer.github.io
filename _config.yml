@@ -1,4 +1,4 @@
 include:
-  - assets/css/dark.css
+  - assets/css/vsdark.css
 
 markdown: GFM
