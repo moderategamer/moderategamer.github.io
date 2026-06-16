@@ -1,0 +1,105 @@
+/* ============================
+   GLOBAL VS DARK+ THEME
+   ============================ */
+
+html, body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+/* Remove all default white backgrounds */
+* {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+
+.site-header {
+  background-color: #252526;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.site-header h1 a {
+  color: #d4d4d4;
+  text-decoration: none;
+}
+
+.site-header h2 {
+  color: #9cdcfe;
+  margin-top: 0.5rem;
+}
+
+/* ============================
+   CONTENT AREA (70% WIDTH)
+   ============================ */
+
+.content-area {
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ============================
+   CARD STYLE POSTS
+   ============================ */
+
+.content-area > * {
+  background-color: #252526;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #3c3c3c;
+}
+
+/* ============================
+   LINKS
+   ============================ */
+
+a {
+  color: #569cd6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9cdcfe;
+}
+
+/* ============================
+   HEADINGS
+   ============================ */
+
+h1, h2, h3, h4, h5 {
+  color: #dcdcdc;
+}
+
+/* ============================
+   CODE BLOCKS
+   ============================ */
+
+pre, code {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+
+.site-footer {
+  background-color: #252526;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #3c3c3c;
+  color: #858585;
+}
