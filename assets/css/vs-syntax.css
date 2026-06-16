@@ -1,0 +1,44 @@
+/* ============================
+   VISUAL STUDIO DARK+ SYNTAX
+   ============================ */
+
+pre, code {
+  font-family: Consolas, "Courier New", monospace;
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+  border: 1px solid #3c3c3c;
+  border-radius: 6px;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+
+/* Keywords (blue) */
+code .k, pre .k {
+  color: #569cd6 !important;
+}
+
+/* Strings (green) */
+code .s, pre .s {
+  color: #ce9178 !important;
+}
+
+/* Numbers (light blue) */
+code .m, pre .m {
+  color: #b5cea8 !important;
+}
+
+/* Comments (grey) */
+code .c, pre .c {
+  color: #6a9955 !important;
+  font-style: italic;
+}
+
+/* Types / Classes (yellow) */
+code .nc, pre .nc {
+  color: #dcdcaa !important;
+}
+
+/* Functions (purple) */
+code .nf, pre .nf {
+  color: #c586c0 !important;
+}
