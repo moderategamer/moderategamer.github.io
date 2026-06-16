@@ -103,3 +103,10 @@ pre, code {
   border-top: 1px solid #3c3c3c;
   color: #858585;
 }
+
+.content-area > pre,
+.content-area > code,
+.content-area > .highlight {
+  margin-bottom: 1.5rem;
+}
+
