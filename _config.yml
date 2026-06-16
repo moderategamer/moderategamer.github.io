@@ -2,3 +2,4 @@ include:
   - assets/css/vsdark.css
 
 markdown: GFM
+highlighter: rouge
