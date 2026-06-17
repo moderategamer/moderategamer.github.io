@@ -5,11 +5,9 @@ title: EF Core Posts
 
 # EF Core
 
-# EF Core Posts
+# EF Core links
 
 - [EF Core mental Model & DBConetxt](ef-core-model.md)
-
-# EF Core — All Posts
 
 {% for post in site.pages %}
   {% if post.path contains 'ef-core/' and post.name != 'README.md' %}
