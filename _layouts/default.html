@@ -17,6 +17,19 @@
       padding: 0;
     }
 
+    header {
+      background: #161b22;
+      padding: 16px 32px;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header a {
+      color: #58a6ff;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
     .markdown-body {
       box-sizing: border-box;
       min-width: 200px;
@@ -24,15 +37,25 @@
       margin: 0 auto;
       padding: 45px;
     }
+
+    .back-link {
+      margin-bottom: 20px;
+      display: block;
+      color: #58a6ff;
+    }
   </style>
 </head>
 
 <body>
+
+  <header>
+    <a href="{{ '/' | relative_url }}">Moderate’s Blog</a>
+  </header>
+
   <article class="markdown-body">
     {{ content }}
   </article>
 
-  <!-- Syntax highlighter -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 </body>
