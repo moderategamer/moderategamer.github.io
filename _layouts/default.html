@@ -15,43 +15,82 @@
       background-color: #0d1117;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      color: #c9d1d9;
     }
 
-    header {
+    /* LEFT SIDEBAR */
+    nav {
+      width: 260px;
       background: #161b22;
-      padding: 16px 32px;
-      border-bottom: 1px solid #30363d;
-    }
-
-    header a {
-      color: #58a6ff;
-      font-size: 20px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .markdown-body {
+      border-right: 1px solid #30363d;
+      padding: 20px;
       box-sizing: border-box;
-      min-width: 200px;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 45px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
     }
 
-    .back-link {
-      margin-bottom: 20px;
-      display: block;
+    nav h2 {
+      margin-top: 0;
       color: #58a6ff;
+    }
+
+    nav a {
+      color: #c9d1d9;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    nav ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+
+    nav li {
+      margin: 6px 0;
+    }
+
+    /* MAIN CONTENT */
+    .markdown-body {
+      flex: 1;
+      max-width: 900px;
+      padding: 45px;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <a href="{{ '/' | relative_url }}">Moderate’s Blog</a>
-  </header>
+  <!-- LEFT SIDEBAR -->
+  <nav>
+    <h2><a href="{{ '/' | relative_url }}">Moderate’s Blog</a></h2>
 
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+
+      <li>
+        <strong>EF Core</strong>
+        <ul>
+          <li><a href="{{ '/ef-core/' | relative_url }}">Overview</a></li>
+          <li><a href="{{ '/ef-core/ef-core-model.html' | relative_url }}">Mental Model</a></li>
+          <li><a href="{{ '/ef-core/dbcontext.html' | relative_url }}">DBContext</a></li>
+          <li><a href="{{ '/ef-core/linq-sql.html' | relative_url }}">LINQ → SQL</a></li>
+        </ul>
+      </li>
+
+      <!-- Add more topics here later -->
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
   <article class="markdown-body">
     {{ content }}
   </article>
@@ -59,6 +98,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 </body>
+
   <footer style="text-align:center; margin-top:40px; color:#666;">
   Last updated: {{ page.date | date: "%B %d, %Y" }}
 </footer>
