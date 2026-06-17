@@ -3,10 +3,6 @@ layout: default
 title: EF Core Posts
 ---
 
-# EF Core
-
-# EF Core links
-
 - [EF Core mental Model & DBConetxt](ef-core-model.md)
 
 {% for post in site.pages %}
