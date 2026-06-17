@@ -4,4 +4,4 @@ Posts about Entity Framework Core.
 
 # EF Core Posts
 
-- [Test Post](test-post.md)
+- [EF Core mental Model & DBConetxt](ef-core-model.md)
