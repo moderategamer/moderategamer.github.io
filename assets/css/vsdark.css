@@ -10,10 +10,9 @@ html, body {
   font-family: Consolas, "Courier New", monospace;
 }
 
-/* Remove all default white backgrounds */
-* {
+/* Prevent global background override from breaking code blocks */
+:not(pre):not(code):not(.highlight) {
   background-color: transparent;
-  color: inherit;
 }
 
 /* ============================
@@ -38,7 +37,7 @@ html, body {
 }
 
 /* ============================
-   CONTENT AREA (70% WIDTH)
+   CONTENT AREA
    ============================ */
 
 .content-area {
@@ -47,14 +46,10 @@ html, body {
   padding: 1rem;
 }
 
-/* ============================
-   CARD STYLE POSTS
-   ============================ */
-
-.content-area > * {
+/* ONE card per post */
+.post {
   background-color: #252526;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 2rem;
   border-radius: 6px;
   border: 1px solid #3c3c3c;
 }
@@ -81,18 +76,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ============================
-   CODE BLOCKS
-   ============================ */
-
-pre, code {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  border: 1px solid #3c3c3c;
-  border-radius: 4px;
-  padding: 0.5rem;
-}
-
-/* ============================
    FOOTER
    ============================ */
 
@@ -103,10 +86,3 @@ pre, code {
   border-top: 1px solid #3c3c3c;
   color: #858585;
 }
-
-.content-area > pre,
-.content-area > code,
-.content-area > .highlight {
-  margin-bottom: 1.5rem;
-}
-
