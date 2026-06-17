@@ -1,10 +1,3 @@
----
-layout: default
-title: EF Core Posts
----
-
-- [EF Core mental Model & DBConetxt](ef-core-model.md)
-
 {% for post in site.pages %}
   {% if post.path contains 'ef-core/' and post.name != 'README.md' %}
   <article class="post">
