@@ -1,2 +1,5 @@
 markdown: GFM
 highlighter: rouge
+
+include:
+  - assets
