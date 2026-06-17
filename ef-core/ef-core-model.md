@@ -3,7 +3,7 @@ layout: default
 title: DBContext
 ---
 
-[← Back to EF Core]({{ '/ef-core/README.html' | relative_url }})
+[← Back to EF Core]({{ '/ef-core/' | relative_url }})
 
 # EF Core Mental Model
 
