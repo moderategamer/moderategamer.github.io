@@ -100,7 +100,7 @@
 </article>
 
 <footer style="text-align:center; margin-top:40px; color:#666;">
-  Last updated: {{ page.date | date: "%B %d, %Y" }}
+  Last updated: {{ page.date | default: site.time | date: "%B %d, %Y" }}
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
