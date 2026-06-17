@@ -21,7 +21,6 @@
       color: #c9d1d9;
     }
 
-    /* LEFT SIDEBAR */
     nav {
       width: 260px;
       background: #161b22;
@@ -57,7 +56,6 @@
       margin: 6px 0;
     }
 
-    /* MAIN CONTENT */
     .markdown-body {
       flex: 1;
       max-width: 900px;
@@ -69,23 +67,21 @@
 
 <body>
 
-  <!-- LEFT SIDEBAR -->
 <nav>
   <h2><a href="{{ '/' | relative_url }}">Moderate’s Blog</a></h2>
 
   <ul>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
 
-    {% assign topic_folders = site.pages | where_exp: "p", "p.path contains '/README.md'" %}
-    {% for topic in topic_folders %}
-      {% assign folder = topic.path | split: '/' | first %}
+    {% assign topics = site.pages | where: "name", "README.md" | where_exp: "p", "p.url != '/' %}
 
+    {% for topic in topics %}
       <li>
-        <strong>{{ folder | capitalize }}</strong>
+        <strong>{{ topic.title }}</strong>
         <ul>
-          <li><a href="{{ '/' | append: folder | append: '/' | relative_url }}">Overview</a></li>
+          <li><a href="{{ topic.url | relative_url }}">Overview</a></li>
 
-          {% assign posts = site.pages | where_exp: "p", "p.path contains folder and p.name != 'README.md'" %}
+          {% assign posts = site.pages | where_exp: "p", "p.path contains topic.dir and p.name != 'README.md'" %}
           {% for post in posts %}
             <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
           {% endfor %}
@@ -95,17 +91,16 @@
   </ul>
 </nav>
 
+<article class="markdown-body">
+  {{ content }}
+</article>
 
-  <!-- MAIN CONTENT -->
-  <article class="markdown-body">
-    {{ content }}
-  </article>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
-
-  <footer style="text-align:center; margin-top:40px; color:#666;">
+<footer style="text-align:center; margin-top:40px; color:#666;">
   Last updated: {{ page.date | date: "%B %d, %Y" }}
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</body>
 </html>
