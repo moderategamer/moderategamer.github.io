@@ -1,8 +1,3 @@
----
-layout: default
-title: Home
----
-
 # moderategamer.github.io
 My learning blog 
 
