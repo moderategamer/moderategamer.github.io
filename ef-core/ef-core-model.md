@@ -1,3 +1,8 @@
+---
+layout: default
+title: DBContext
+---
+
 # EF Core Mental Model
 
 ## What is DBContext 
