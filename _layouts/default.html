@@ -73,22 +73,27 @@
   <ul>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
 
-{% assign topics = site.pages | where: "name", "README.md" | where_exp: "p", "p.url != '/'" %}
+    <!-- EF Core -->
+    <li>
+      <strong>EF Core</strong>
+      <ul>
+        <li><a href="{{ '/ef-core/' | relative_url }}">Overview</a></li>
+        <li><a href="{{ '/ef-core/ef-core-model.html' | relative_url }}">Mental Model</a></li>
+        <li><a href="{{ '/ef-core/dbcontext.html' | relative_url }}">DBContext</a></li>
+        <li><a href="{{ '/ef-core/linq-sql.html' | relative_url }}">LINQ → SQL</a></li>
+      </ul>
+    </li>
 
-{% for topic in topics %}
-  <li>
-    <strong>{{ topic.title }}</strong>
-    <ul>
-      <li><a href="{{ topic.url | relative_url }}">Overview</a></li>
-
-      {% assign posts = site.pages | where_exp: "p", "p.path contains topic.dir and p.name != 'README.md'" %}
-      {% for post in posts %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </li>
-{% endfor %}
-
+    <!-- Add more topics manually -->
+    <!--
+    <li>
+      <strong>C#</strong>
+      <ul>
+        <li><a href="/csharp/">Overview</a></li>
+        <li><a href="/csharp/post1.html">Post 1</a></li>
+      </ul>
+    </li>
+    -->
   </ul>
 </nav>
 
