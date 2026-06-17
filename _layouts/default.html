@@ -70,9 +70,7 @@
 <nav>
   <h2><a href="{{ '/' | relative_url }}">Moderate’s Blog</a></h2>
   
-    <h3 style="text-align:center; margin-top:5px; color:#666;">
-      Last updated: {{ page.date | default: site.time | date: "%B %d, %Y" }}
-    </h3>
+    
 
   <ul>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
@@ -97,7 +95,9 @@
     </li>
     -->
   </ul>
-
+<footer style="text-align:center; bottom:8px; color:#666;">
+      Last updated: {{ page.date | default: site.time | date: "%B %d, %Y" }}
+    </footer>
 </nav>
 
 <article class="markdown-body">
