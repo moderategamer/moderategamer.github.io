@@ -11,7 +11,7 @@ A DBContext is a session that tracks entities, detects change, and saves everyth
 ### Entities are tracked Objects
 EF keeps original + current values and knows when something is Modified.
 
-```
+```csharp
   var user = await db.Users.FirstAsync();
   user.Name = "Moderate";
   await db.SaveChangesAsync();
@@ -24,7 +24,7 @@ EF builds SQL - it does not run C# in memory
 
 ### LINQ 
 
-```
+```csharp
   var active = await db.Users
       .Where(u => u.IsActive)
       .ToListAsync();
@@ -33,7 +33,7 @@ EF builds SQL - it does not run C# in memory
 
 ### translated SQL
 
-```
+```sql
 SELECT * FROM Users WHERE IsActive = 1;
 ```
 
