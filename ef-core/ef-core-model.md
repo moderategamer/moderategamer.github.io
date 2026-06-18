@@ -5,16 +5,16 @@ title: DBContext
 
 [← Back to EF Core]({{ '/ef-core/' | relative_url }})
 
-#Build the EF Core Mental Model
+# Build the EF Core Mental Model
 
-##What is it?
+## What is it?
 The Ef Core mental model is built on four pillars
 - The DB Context (a unit of work)
 - Entities are tracked data, not just data
 - LINQ is translated into SQL, not executed in memory
 - Navigation properties define the shape of your relational world
 
-##Why it matters?
+## Why it matters?
 Once you understand these four pillars, EF stops being magic
 
 # DB Context
@@ -31,7 +31,7 @@ it's not just a connection!
 - Detects changes, it knows what properties have changed since loading
 - Saves changes as a single transaction, All inserts/updates/deletes happen together
 
-#Why this matters?
+# Why this matters?
 If you understand that the DBontext is a session, you undestand:
 - why you don't use "using" in a REST API
 - why you shouldn't keep the context alive too long
