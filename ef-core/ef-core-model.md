@@ -30,7 +30,6 @@ EF builds SQL - it does not run C# in memory
   var active = await db.Users
       .Where(u => u.IsActive)
       .ToListAsync();
-
 ```
 
 ### translated SQL
