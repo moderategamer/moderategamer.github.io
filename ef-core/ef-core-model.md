@@ -5,41 +5,34 @@ title: DBContext
 
 [← Back to EF Core]({{ '/ef-core/' | relative_url }})
 
-# EF Core Mental Model
+#Build the EF Core Mental Model
 
-## What is DBContext 
-A DBContext is a session that tracks entities, detects change, and saves everything in one transaction.
+##What is it?
+The Ef Core mental model is built on four pillars
+- The DB Context (a unit of work)
+- Entities are tracked data, not just data
+- LINQ is translated into SQL, not executed in memory
+- Navigation properties define the shape of your relational world
 
-### Entities are tracked Objects
-EF keeps original + current values and knows when something is Modified.
+##Why it matters?
+Once you understand these four pillars, EF stops being magic
 
-```csharp
-  var user = await db.Users.FirstAsync();
-  user.Name = "Moderate";
-  await db.SaveChangesAsync();
-```
+# DB Context
 
-Notice how EF was able to track the change to user model automatically before db.SaveChangesAsync() was called.
+## Think of the DB Context as
+- A session with the database
+- A change tracker
+- A query translator
+- A transaction boundary 
+it's not just a connection!
 
-## LINQ Is translated into SQL
-EF builds SQL - it does not run C# in memory 
+## DBConext does three things
+- Tracks entities, it remembers every entity you load or attach
+- Detects changes, it knows what properties have changed since loading
+- Saves changes as a single transaction, All inserts/updates/deletes happen together
 
-### LINQ 
-
-```csharp
-  var active = await db.Users
-      .Where(u => u.IsActive)
-      .ToListAsync();
-```
-
-### translated SQL
-
-```sql
-SELECT * FROM Users WHERE IsActive = 1;
-```
-
-## Summary
-- **DbContext = Unit of Work** → Tracks entities, detects changes, saves in one transaction.
-- **Entities are tracked** → EF stores original/current values and marks Modified automatically.
-- **LINQ becomes SQL** → EF translates expressions; avoid `.ToList()` too early.
-
+#Why this matters?
+If you understand that the DBontext is a session, you undestand:
+- why you don't use "using" in a REST API
+- why you shouldn't keep the context alive too long
+- why EF knows what to update without telling you
