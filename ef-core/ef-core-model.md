@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DBContext
+title: EF Core mental model intro
 ---
 
 [← Back to EF Core]({{ '/ef-core/' | relative_url }})
